@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "deimos",
+	"version": "1.0.0",
+	"name": "Deimos",
+	"description": "Private 2y2c hack client for Curt of lamb",
+	"authors": [
+		"haiminh256"
+	],
+	"license": "MIT",
+	"icon": "assets/deimos/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.deimos.client.Deimos"
+		],
+		"client": [
+			"com.deimos.client.DeimosClient"
+		]
+	},
+	"mixins": [
+		"deimos.mixins.json",
+		{
+			"config": "deimos.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
