@@ -5,7 +5,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-import com.deimos.module.movement.Flight;
+import com.deimos.module.movement.*;
+import com.deimos.module.player.*;
 import com.deimos.module.gui.ClickGui;
 
 public class ModuleManager {
@@ -13,7 +14,11 @@ public class ModuleManager {
     public ModuleManager(){
         modules = new ArrayList<>();
         addMod(new Flight());
-
+        addMod(new AntiHunger());
+        addMod(new NoFall());
+        addMod(new AutoRespawn());
+        addMod(new Jesus());
+        addMod(new AutoSprint());
         addMod(new ClickGui()); // Add this line
 
 
